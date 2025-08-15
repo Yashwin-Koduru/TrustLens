@@ -8,8 +8,10 @@ Quick demo for the applied project.
 
 ## Frontend
 pip install -r requirements.txt
+
 streamlit run app_streamlit.py
 
 ## Backend (optional)
 pip install -r requirements.txt
+
 uvicorn backend_api:app --reload --port 8000
