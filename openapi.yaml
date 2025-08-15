@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: TrustLens Demo API
+  version: "0.1.0"
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: OK
+  /audit:
+    post:
+      summary: Run fairness audit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dataset_id: { type: string }
+                attributes:
+                  type: array
+                  items: { type: string }
+      responses:
+        "200":
+          description: OK
